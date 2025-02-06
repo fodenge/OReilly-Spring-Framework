@@ -11,8 +11,8 @@ public class LearnSpringFrameworkApplication {
 
 	public static void main(String[] args) {
 //		SpringApplication.run(LearnSpringFrameworkApplication.class, args);
-//		MarioGame game = new MarioGame();
-		SuperContraGame game = new SuperContraGame();
+		MarioGame game = new MarioGame();
+//		SuperContraGame game = new SuperContraGame();  // Now we can run any game without the changing the code in Game Runner -- LOOSE COUPLING
 		GameRunner runner = new GameRunner(game);
 		runner.run();
 	}
