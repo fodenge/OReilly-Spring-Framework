@@ -18,7 +18,8 @@ class BusinessService{
 
     private DataService dataService;
     @Autowired
-    public void setDataService(DataService dataService) {       //Dependency Injection through Setter method
+    public BusinessService(DataService dataService) {
+        System.out.println("Constructor injection");      // Constructor Injection
         this.dataService = dataService;
     }
 
