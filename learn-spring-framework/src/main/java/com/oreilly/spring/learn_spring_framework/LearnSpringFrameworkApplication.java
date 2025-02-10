@@ -1,5 +1,6 @@
 package com.oreilly.spring.learn_spring_framework;
 
+import com.oreilly.spring.learn_spring_framework.enterprise.example.MyWebController;
 import com.oreilly.spring.learn_spring_framework.game.GameRunner;
 import com.oreilly.spring.learn_spring_framework.game.MarioGame;
 import com.oreilly.spring.learn_spring_framework.game.SuperContraGame;
@@ -17,6 +18,8 @@ public class LearnSpringFrameworkApplication {
 //		GameRunner runner = new GameRunner(game);
 		GameRunner runner = context.getBean(GameRunner.class);
 		runner.run();
+		MyWebController myWebController = context.getBean(MyWebController.class);
+		System.out.println(myWebController.returnValueFromBusinessLayer());
 	}
 
 }
